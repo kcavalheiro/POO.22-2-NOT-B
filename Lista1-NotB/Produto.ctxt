@@ -1,0 +1,23 @@
+#BlueJ class context
+comment0.target=Produto
+comment0.text=\r\n\ Escreva\ uma\ descri\u00E7\u00E3o\ da\ classe\ Produto\ aqui.\r\n\ \r\n\ @author\ (seu\ nome)\ \r\n\ @version\ (um\ n\u00FAmero\ da\ vers\u00E3o\ ou\ uma\ data)\r\n
+comment1.params=nome\ descricao\ precoUnitario\ desconto
+comment1.target=Produto(java.lang.String,\ java.lang.String,\ double,\ int)
+comment1.text=\r\n\ Construtor\ para\ objetos\ da\ classe\ Produto\r\n
+comment2.params=
+comment2.target=java.lang.String\ getNome()
+comment3.params=nome
+comment3.target=void\ setNome(java.lang.String)
+comment4.params=
+comment4.target=java.lang.String\ getDescricao()
+comment5.params=descricao
+comment5.target=void\ setDescricao(java.lang.String)
+comment6.params=
+comment6.target=double\ getPrecoUnitario()
+comment7.params=preco
+comment7.target=void\ setPrecoUnitario(double)
+comment8.params=
+comment8.target=int\ getDesconto()
+comment9.params=desconto
+comment9.target=void\ setDesconto(int)
+numComments=10
