@@ -1,0 +1,27 @@
+#BlueJ class context
+comment0.target=Cidade
+comment1.params=nome\ popMasc\ popFem
+comment1.target=Cidade(java.lang.String,\ int,\ int)
+comment10.params=popFem
+comment10.target=void\ setPopFem(int)
+comment11.params=
+comment11.target=boolean\ isCalculado()
+comment12.params=calculado
+comment12.target=void\ setCalculado(boolean)
+comment2.params=
+comment2.target=Cidade()
+comment3.params=
+comment3.target=java.lang.String\ getNome()
+comment4.params=nome
+comment4.target=void\ setNome(java.lang.String)
+comment5.params=
+comment5.target=java.lang.String\ getUf()
+comment6.params=uf
+comment6.target=void\ setUf(java.lang.String)
+comment7.params=
+comment7.target=int\ getPopMasc()
+comment8.params=popMasc
+comment8.target=void\ setPopMasc(int)
+comment9.params=
+comment9.target=int\ getPopFem()
+numComments=13
