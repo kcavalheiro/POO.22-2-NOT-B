@@ -41,11 +41,11 @@ public class InteiroPositivo
         int contador = 0;
         for (int divisor = 1; divisor <= this.x; divisor++){
             if (this.x % divisor == 0) {
-                str += divisor+", ";
+                str += divisor+",";
                 contador++;
             }
         }
-        return str +" e a quantidade de divisores é "+contador+".";
+        return str +" e a quantidade de divisores é "+contador;
         //return "Os divisores são 1, 2, 3, 4, 6, 12 e a quantidade de divisores é 6.";
     }
 
