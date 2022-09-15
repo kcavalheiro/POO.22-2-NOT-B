@@ -6,6 +6,9 @@ import javax.swing.JOptionPane;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
 import javax.swing.GroupLayout;
+import java.awt.event.FocusAdapter;
+import java.awt.event.FocusEvent;
+import javax.swing.DefaultComboBoxModel;
 
 /*
  * Apresentacao.java
@@ -17,7 +20,8 @@ import javax.swing.GroupLayout;
 public class Apresentacao extends javax.swing.JFrame {
 
     private DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-
+    private Agenda agenda = new Agenda();
+    
     /** Creates new form Apresentacao */
     public Apresentacao() {
         initComponents();
@@ -33,9 +37,27 @@ public class Apresentacao extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         tfEfemeride = new javax.swing.JTextField();
         tfData = new javax.swing.JTextField();
+        tfData.addFocusListener(new FocusAdapter() {
+        	@Override
+        	public void focusLost(FocusEvent e) {
+        		LocalDate ld = LocalDate.parse(tfData.getText(),formatter);
+        		DataAgenda data = agenda.getDataAgenda(ld);
+        		if (data == null) {
+        			jBIncluirNaAgenda.setEnabled(true);
+        		}
+        		else {
+        			tfEfemeride.setText(data.getEfemeride());
+        			jBIncluirNaAgenda.setEnabled(false);
+        			int qtde = data.getQtdCompromissosPrioridade('A');
+        			String str = "Compromissos de alta prioridade = "+qtde;
+        			JOptionPane.showMessageDialog(null, str);
+        		}
+        	}
+        });
         jLabel2 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jBIncluirNaAgenda = new javax.swing.JButton();
+        jBIncluirNaAgenda.setEnabled(false);
         jPanel2 = new javax.swing.JPanel();
         jLabel3 = new javax.swing.JLabel();
         tfTempo = new javax.swing.JTextField();
@@ -238,7 +260,7 @@ public class Apresentacao extends javax.swing.JFrame {
 
         jLabel9.setText("Prioridade:");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Alta", "M�dia", "Baixa" }));
+        jComboBox1.setModel(new DefaultComboBoxModel(new String[] {"Alta", "Normal", "Baixa"}));
 
         jLabel7.setText("Pesquisar compromissos:");
 
@@ -342,6 +364,11 @@ public class Apresentacao extends javax.swing.JFrame {
 
     private void jBIncluirNaAgendaActionPerformed(java.awt.event.ActionEvent evt) {
     	LocalDate ld = LocalDate.parse(tfData.getText(),formatter);
+    	DataAgenda nova = new DataAgenda();
+    	nova.setData(ld);
+    	nova.setEfemeride(tfEfemeride.getText());
+    	agenda.addDataAgenda(nova);
+    	jBIncluirNaAgenda.setEnabled(false);
     }
 
     private void jBCompromissosDiaPrioridadeActionPerformed(java.awt.event.ActionEvent evt) {
