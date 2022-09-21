@@ -51,4 +51,27 @@ public class Partido {
 			this.numero = numero;
 		}
 	}
+
+	public Vereador getVerMaisProjAprov() {
+		if (vereadores.isEmpty()) {
+			return null;
+		}
+		Vereador maisAprov = vereadores.get(0);
+		
+		for (Vereador v: vereadores) {
+			if (v.getQtdProjAprov() > maisAprov.getQtdProjAprov()) {
+				maisAprov = v;
+			}
+		}
+		
+		return maisAprov;
+	}
+
+	public ArrayList<Vereador> getVereadores() {
+		return this.vereadores;
+	}
+	
+	public int getQtdVereadores() {
+		return this.vereadores.size();
+	}
 }
