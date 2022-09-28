@@ -10,6 +10,9 @@ public class Obra {
 			pareceres[indice] = p;
 			indice++;
 		}
+		else {
+			throw new IllegalArgumentException("Chegou ao limite de 3 pareceres");
+		}
 	}
 	
 	public Parecer getParecer(int posicao) {

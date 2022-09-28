@@ -13,6 +13,10 @@ public class Parecer {
 		if (parecerista != null && !parecerista.isBlank()) {
 			this.parecerista = parecerista;
 		}
+		else {
+			IllegalArgumentException excecao = new IllegalArgumentException("NOME DO PARECERISTA INVÁLIDO");
+			throw excecao;
+		}
 	}
 
 	public LocalDate getData() {
@@ -28,6 +32,9 @@ public class Parecer {
 	}
 
 	public void setConteudo(String conteudo) {
+		if (conteudo == null || conteudo.isBlank()) {
+			throw new IllegalArgumentException("Conteúdo do parecer deve ser informado.");
+		}
 		this.conteudo = conteudo;
 	}
 
