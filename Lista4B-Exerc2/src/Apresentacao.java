@@ -80,7 +80,7 @@ public class Apresentacao {
 
 		cbTipoAluno = new JComboBox();
 		cbTipoAluno.setModel(new DefaultComboBoxModel(new String[] {"Ensino M\u00C3\u00A9dio", "Universit\u00C3\u00A1rio"}));
-		cbTipoAluno.setToolTipText("Ensino M√©dio\r\nUniversit√°rio");
+		cbTipoAluno.setToolTipText("Ensino MÈdio\r\nUniversit·rio");
 		cbTipoAluno.setBounds(283, 28, 96, 22);
 		frame.getContentPane().add(cbTipoAluno);
 
@@ -146,7 +146,7 @@ public class Apresentacao {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				String str = "Lista dos alunos\\n";
-				
+				alunos.sort(null);
 				for (Aluno a : alunos) {
 					str += "\n" + a.mostra(); // polimorfismo
 				}
@@ -161,12 +161,12 @@ public class Apresentacao {
 		lblNewLabel_1.setBounds(164, 10, 45, 13);
 		frame.getContentPane().add(lblNewLabel_1);
 
-		JLabel lblNewLabel_1_1 = new JLabel("Aluno ensino m√©dio");
+		JLabel lblNewLabel_1_1 = new JLabel("Aluno ensino mÈdio");
 		lblNewLabel_1_1.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblNewLabel_1_1.setBounds(23, 128, 113, 13);
 		frame.getContentPane().add(lblNewLabel_1_1);
 
-		JLabel lblNewLabel_1_1_1 = new JLabel("Aluno universit√°rio");
+		JLabel lblNewLabel_1_1_1 = new JLabel("Aluno universit·rio");
 		lblNewLabel_1_1_1.setFont(new Font("Tahoma", Font.BOLD, 10));
 		lblNewLabel_1_1_1.setBounds(245, 125, 113, 13);
 		frame.getContentPane().add(lblNewLabel_1_1_1);

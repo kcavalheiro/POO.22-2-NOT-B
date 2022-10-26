@@ -3,7 +3,7 @@ import java.time.Period;
 
 
 
-public abstract class Aluno {
+public abstract class Aluno implements Comparable<Aluno> {
     
     protected String nome;
     protected LocalDate dataNascimento;
@@ -14,7 +14,14 @@ public abstract class Aluno {
     }
 
 
-   public abstract String mostra();
+   @Override
+	public int compareTo(Aluno outro) {
+		return this.nome.compareTo(outro.getNome());
+	}
+
+
+
+public abstract String mostra();
     
     public int getIdade() {
     	return Period.between(dataNascimento,LocalDate.now()).getYears();

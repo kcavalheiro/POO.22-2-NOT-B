@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class AlunoEnsinoMedio extends Aluno {
+public class AlunoEnsinoMedio extends Aluno  {
    private short ano;
 
    public AlunoEnsinoMedio(String nome, LocalDate dataNascimento, short ano) {
