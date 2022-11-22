@@ -11,12 +11,12 @@ public class Exerc1 {
 
 	public static void main(String[] args) {
 		try {
-			// gravação do arquivo texto
+			// gravaÃ§Ã£o do arquivo texto
 			FileWriter fw = new FileWriter("TextoExerc1.txt");
 			fw.write("12345");
 			fw.close();
 			
-			// gravação do arquivo binário
+			// gravaÃ§Ã£o do arquivo binï¿½rio
 			FileOutputStream fos = new FileOutputStream("BinarioExerc1.dat");
 			DataOutputStream dos = new DataOutputStream(fos);
 			dos.writeInt(12345);
@@ -32,21 +32,21 @@ public class Exerc1 {
 			FileReader fr2 = new FileReader("BinarioExerc1.dat");
 			BufferedReader bf2 = new BufferedReader(fr2);
 			lido = bf2.readLine();
-			System.out.println("Lido texto de binário = "+lido);
+			System.out.println("Lido texto de binÃ¡rio = "+lido);
 			bf2.close();
 			
 			
-			// leitura como binário de ambos os arquivos
+			// leitura como binÃ¡rio de ambos os arquivos
 			FileInputStream fis1 = new FileInputStream("TextoExerc1.txt");
 			DataInputStream dis1 = new DataInputStream(fis1);
 			int intLido = dis1.readInt();
-			System.out.println("Lido binário de texto = "+intLido);
+			System.out.println("Lido binÃ¡rio de texto = "+intLido);
 			dis1.close();
 
 			FileInputStream fis2 = new FileInputStream("BinarioExerc1.dat");
 			DataInputStream dis2 = new DataInputStream(fis2);
 			intLido = dis2.readInt();
-			System.out.println("Lido binário de binário = "+intLido);
+			System.out.println("Lido binÃ¡rio de binÃ¡rio = "+intLido);
 			dis2.close();
 		
 		} catch (IOException e) {
