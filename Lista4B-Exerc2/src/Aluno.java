@@ -1,9 +1,10 @@
+import java.io.Serializable;
 import java.time.LocalDate;
 import java.time.Period;
 
 
 
-public abstract class Aluno implements Comparable<Aluno> {
+public abstract class Aluno implements Comparable<Aluno>, Serializable {
     
     protected String nome;
     protected LocalDate dataNascimento;
@@ -37,7 +38,7 @@ public abstract String mostra();
             this.nome = nome;            
         }
         else {
-        	throw new IllegalArgumentException("Nome do aluno inválido.");
+        	throw new IllegalArgumentException("Nome do aluno invï¿½lido.");
         }
     }
     

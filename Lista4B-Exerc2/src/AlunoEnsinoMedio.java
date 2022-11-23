@@ -23,15 +23,15 @@ public class AlunoEnsinoMedio extends Aluno  {
 
    @Override
     public String mostra() {
-	   // Carlos Pinheiro está cursando o 1o ano do ensino médio e tem 14anos.
-        return this.nome + " está cursando o "
-        		+ this.ano + "° ano do ensino médio e tem "
+	   // Carlos Pinheiro estï¿½ cursando o 1o ano do ensino mï¿½dio e tem 14anos.
+        return this.nome + " estï¿½ cursando o "
+        		+ this.ano + "ï¿½ ano do ensino mï¿½dio e tem "
                 + this.getIdade() + " anos.";        
     }
     
 	@Override
 	protected void finalize() throws Throwable {
-		System.out.println("Destruindo ensino médio:"+this.nome);
+		System.out.println("Destruindo ensino mï¿½dio:"+this.nome);
 		super.finalize();  // chamando o destrutor da superclasse (Aluno)
 	}
 }

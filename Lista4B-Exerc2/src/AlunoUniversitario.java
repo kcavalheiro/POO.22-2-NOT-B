@@ -1,6 +1,6 @@
 import java.time.LocalDate;
 
-public class AlunoUniversitario extends Aluno {
+public class AlunoUniversitario extends Aluno  {
 	private char formaIngresso;
 	private Curso curso;
 
@@ -18,8 +18,8 @@ public class AlunoUniversitario extends Aluno {
 
 	@Override
 	public String mostra() {
-		// João Carlos é aluno universitário do curso de SIS–Sistemas de Informação, ingressando por ENEM.
-		return this.nome + " é aluno universitário do curso de " 
+		// Joï¿½o Carlos ï¿½ aluno universitï¿½rio do curso de SISï¿½Sistemas de Informaï¿½ï¿½o, ingressando por ENEM.
+		return this.nome + " ï¿½ aluno universitï¿½rio do curso de " 
 				+ this.curso.getSigla() + " - " + this.curso.getNome()
 				+ ", ingressando por " + this.getFormaIngresso();
 	}
@@ -33,7 +33,7 @@ public class AlunoUniversitario extends Aluno {
 		case 'S':
 			return "Seletivo";
 		case 'T':
-			return "Transferência";
+			return "Transferï¿½ncia";
 		case 'I':
 			return "Interna";
 		}
@@ -65,7 +65,7 @@ public class AlunoUniversitario extends Aluno {
 
 	@Override
 	protected void finalize() throws Throwable {
-		System.out.println("Destruindo universitário:"+this.nome);
+		System.out.println("Destruindo universitï¿½rio:"+this.nome);
 		super.finalize();
 	}
 

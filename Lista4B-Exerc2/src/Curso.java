@@ -1,7 +1,8 @@
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Curso  {
+public class Curso implements Serializable {
 	private String sigla;
 	private String nome;
 
@@ -30,7 +31,7 @@ public class Curso  {
 		if (nome.length() >= 5) {
 			this.nome = nome;
 		}else {
-        	throw new IllegalArgumentException("Nome do curso inválido");
+        	throw new IllegalArgumentException("Nome do curso invï¿½lido");
         }
 	}
 
